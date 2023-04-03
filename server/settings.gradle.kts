@@ -1,0 +1,10 @@
+rootProject.name = "faka"
+include("faka-merchant-service")
+include("faka-response-result")
+include("faka-util")
+include("faka-gateway-service")
+include("faka-configuration")
+include("faka-dependency")
+include("faka-commodity-service")
+include("faka-pay-service")
+include("faka-model")

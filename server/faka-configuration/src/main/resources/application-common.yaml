@@ -1,0 +1,25 @@
+host: 192.168.56.101
+website: http://localhost:8080
+spring:
+  data:
+    redis:
+      host: ${host}
+    mongodb:
+      uri: mongodb://${host}/faka
+  datasource:
+    url: jdbc:mariadb://${host}:3306/faka
+    driver-class-name: org.mariadb.jdbc.Driver
+    username: root
+    password: root
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${host}
+  rabbitmq:
+    host: ${host}
+    username: root
+    password: root
+sa-token:
+  token-name: token
+jimmer:
+  language: kotlin

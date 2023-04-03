@@ -1,0 +1,9 @@
+server:
+  port: 8003
+spring:
+  application:
+    name: pay-service
+  profiles:
+    include:
+      - common
+      - alipay

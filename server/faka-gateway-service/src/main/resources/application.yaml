@@ -1,0 +1,39 @@
+server:
+  port: 8080
+spring:
+  profiles:
+    include:
+      - common
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+  application:
+    name: gateway-service
+unmatched:
+  all:
+    - method: all
+      pattern: /api/merchant/auth/**
+    - method: all
+      pattern: /api/**/v3/api-docs
+    - method: all
+      pattern: /v3/api-docs/**
+    - method: all
+      pattern: /swagger-ui.html
+    - method: all
+      pattern: /webjars/swagger-ui/**
+    - method: all
+      pattern: /api/pay/alipay/**
+    - method: get
+      pattern: /api/merchant/store
+    - method: get
+      pattern: /api/commodity/category
+    - method: get
+      pattern: /api/commodity/goods/**
+    - method: post
+      pattern: /api/pay/order
+    - method: get
+      pattern: /api/pay/order/**
+    - method: get
+      pattern: /api/merchant/user/**

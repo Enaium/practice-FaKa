@@ -1,0 +1,8 @@
+server:
+  port: 8002
+spring:
+  application:
+    name: commodity-service
+  profiles:
+    include:
+      - common
